@@ -28,6 +28,8 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { circleProgress } from '../plugins/progess_bar'
 
 import { tryToSeeIfWorks } from "../packs/try"
+import { trial } from "../plugins/tryfile"
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -38,4 +40,5 @@ document.addEventListener('turbolinks:load', () => {
   tryToSeeIfWorks();
   initMapbox();
   circleProgress();
+  trial();
 });
