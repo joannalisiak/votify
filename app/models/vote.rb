@@ -1,7 +1,8 @@
 class Vote < ApplicationRecord
   belongs_to :idea
   belongs_to :user
-
+  # the vote is unique
+  validates :user, uniqueness: { scope: :idea }
   after_create :check_idea_status
 
   def check_idea_status
